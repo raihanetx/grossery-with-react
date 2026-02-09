@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumina - Fresh Groceries</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF7F32',
+                        dark: '#1F2937',
+                        grey: '#6B7280',
+                        ink: '#111827', // Rich deep black for receipt
+                        active: '#F97316', // Premium Orange for receipt
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Poppins', 'sans-serif'], // Added Outfit as primary sans font
+                        bangla: ['Hind Siliguri', 'sans-serif'],
+                        print: ['Courier Prime', 'monospace'], // New font for receipt
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --background: 220 20% 98%;
+            --foreground: 220 25% 10%;
+            --card: 0 0% 100%;
+            --card-foreground: 220 25% 10%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 220 25% 10%;
+            --primary: 22 95% 55%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 220 15% 92%;
+            --secondary-foreground: 220 25% 10%;
+            --muted: 220 15% 92%;
+            --muted-foreground: 220 10% 45%;
+            --accent: 140 80% 95%;
+            --accent-foreground: 140 30% 30%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 98%;
+            --border: 220 15% 88%;
+            --input: 220 15% 95%;
+            --ring: 22 95% 55%;
+            --radius: 0.75rem;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f5f7;
+            color: #1F2937; /* Default text color from design */
+            -webkit-font-smoothing: antialiased; /* Antialiased font for better appearance */
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .font-bangla {
+            font-family: 'Hind Siliguri', 'sans-serif';
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .btn-tap:active { transform: scale(0.96); }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "gsap": "https://esm.sh/gsap@^3.14.2",
+    "cors": "https://esm.sh/cors@^2.8.6",
+    "express": "https://esm.sh/express@^5.2.1",
+    "dotenv": "https://esm.sh/dotenv@^17.2.4",
+    "drizzle-orm/": "https://esm.sh/drizzle-orm@^0.45.1/",
+    "drizzle-orm": "https://esm.sh/drizzle-orm@^0.45.1",
+    "@neondatabase/serverless": "https://esm.sh/@neondatabase/serverless@^1.0.2",
+    "drizzle-kit": "https://esm.sh/drizzle-kit@^0.31.8"
+  }
+}
+</script>
+</head>
+<body class="bg-white text-dark antialiased pb-10">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
